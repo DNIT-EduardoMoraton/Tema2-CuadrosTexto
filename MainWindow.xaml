@@ -1,0 +1,20 @@
+﻿<Window x:Class="Tema2_CuadrosTexto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema2_CuadrosTexto"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="nombreTextBox" HorizontalAlignment="Left" Height="23" Margin="135,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="nombreTextBox_KeyDown"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="135,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="edadTextBox" HorizontalAlignment="Left" Height="23" Margin="135,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="edadTextBox_KeyDown"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,96,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Apellido"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="60,191,0,0" TextWrapping="Wrap" Text="Edad" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ayudaNombreTextBlock" HorizontalAlignment="Left" Margin="275,99,0,0" TextWrapping="Wrap" Text="Debes introducir el nombre" VerticalAlignment="Top" Opacity="0.5" Visibility="Hidden"/>
+        <TextBlock x:Name="errorEdadTextBlock" HorizontalAlignment="Left" Margin="275,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"><Run Text="Error Tiene que ser un numero"/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</Window>
