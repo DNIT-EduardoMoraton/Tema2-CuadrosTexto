@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tema2_CuadrosTexto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Formato Texto" Height="450" Width="800" Icon="assets/documentediting_editdocuments_text_documentedi_2820.ico">
     <Grid>
         <TextBox x:Name="nombreTextBox" HorizontalAlignment="Left" Height="23" Margin="135,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="nombreTextBox_KeyDown"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="135,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
