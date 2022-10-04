@@ -23,26 +23,28 @@ namespace Tema2_CuadrosTexto
         public MainWindow()
         {
             InitializeComponent();
-            nombreTextBox.Tag = false;
+            nombreTextBox.Tag = new {helper = ayudaNombreTextBlock, toggle=  false};
+            apellidoTextBox.Tag = new {helper = ayudaApellidoTextBlock, toggle = false };
             edadTextBox.Tag = false;
         }
 
-        private void nombreTextBox_KeyDown(object sender, KeyEventArgs e)
+        private void ayudaTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox tb = (TextBox)sender;
-
-            bool enabled = (bool)tb.Tag;
+            dynamic content = tb.Tag;
+            bool enabled = content.toggle;
             Console.WriteLine(enabled);
             if (e.Key == Key.F1)
                 enabled = !enabled;
-            
 
+            TextBlock ayuda = content.helper;
             if (enabled)
-                ayudaNombreTextBlock.Visibility = Visibility.Visible;
+                ayuda.Visibility = Visibility.Visible;
             else
-                ayudaNombreTextBlock.Visibility = Visibility.Hidden;
+                ayuda.Visibility = Visibility.Hidden;
 
-            tb.Tag = enabled;
+     
+            tb.Tag = new {helper = ayuda, toggle = enabled};
         }
 
         private void edadTextBox_KeyDown(object sender, KeyEventArgs e)

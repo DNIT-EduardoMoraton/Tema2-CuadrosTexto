@@ -7,14 +7,15 @@
         mc:Ignorable="d"
         Title="Formato Texto" Height="450" Width="800" Icon="assets/documentediting_editdocuments_text_documentedi_2820.ico">
     <Grid>
-        <TextBox x:Name="nombreTextBox" HorizontalAlignment="Left" Height="23" Margin="135,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="nombreTextBox_KeyDown"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="135,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="nombreTextBox" HorizontalAlignment="Left" Height="23" Margin="135,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="ayudaTextBox_KeyDown"/>
+        <TextBox x:Name="apellidoTextBox" HorizontalAlignment="Left" Height="23" Margin="135,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="ayudaTextBox_KeyDown"/>
         <TextBox x:Name="edadTextBox" HorizontalAlignment="Left" Height="23" Margin="135,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="edadTextBox_KeyDown"/>
         <TextBlock HorizontalAlignment="Left" Margin="60,96,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="60,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Apellido"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="60,191,0,0" TextWrapping="Wrap" Text="Edad" VerticalAlignment="Top"/>
         <TextBlock x:Name="ayudaNombreTextBlock" HorizontalAlignment="Left" Margin="275,99,0,0" TextWrapping="Wrap" Text="Debes introducir el nombre" VerticalAlignment="Top" Opacity="0.5" Visibility="Hidden"/>
         <TextBlock x:Name="errorEdadTextBlock" HorizontalAlignment="Left" Margin="275,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"><Run Text="Error Tiene que ser un numero"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="ayudaApellidoTextBlock" HorizontalAlignment="Left" Margin="275,149,0,0" TextWrapping="Wrap" Text="Debes introducir el apellido" VerticalAlignment="Top" Opacity="0.5" Visibility="Hidden"/>
 
     </Grid>
 </Window>
