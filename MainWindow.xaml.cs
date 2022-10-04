@@ -23,8 +23,8 @@ namespace Tema2_CuadrosTexto
         public MainWindow()
         {
             InitializeComponent();
-            nombreTextBox.Tag = new {helper = ayudaNombreTextBlock, toggle=  false};
-            apellidoTextBox.Tag = new {helper = ayudaApellidoTextBlock, toggle = false };
+            nombreTextBox.Tag = new {helper = ayudaNombreTextBlock, toggle =  false};
+            apellidoTextBox.Tag = new {helper = ayudaApellidoTextBlock, toggle = false};
             edadTextBox.Tag = false;
         }
 
@@ -33,7 +33,7 @@ namespace Tema2_CuadrosTexto
             TextBox tb = (TextBox)sender;
             dynamic content = tb.Tag;
             bool enabled = content.toggle;
-            Console.WriteLine(enabled);
+
             if (e.Key == Key.F1)
                 enabled = !enabled;
 
@@ -43,7 +43,6 @@ namespace Tema2_CuadrosTexto
             else
                 ayuda.Visibility = Visibility.Hidden;
 
-     
             tb.Tag = new {helper = ayuda, toggle = enabled};
         }
 
@@ -51,7 +50,7 @@ namespace Tema2_CuadrosTexto
         {
             TextBox tb = (TextBox)sender;
             bool enabled = (bool)tb.Tag;
-            if (e.Key == Key.F2 && !int.TryParse(tb.Text, out int outNum))
+            if (e.Key == Key.F2 && !int.TryParse(tb.Text, out _))
                 enabled = true;
             else
                 enabled = false;
